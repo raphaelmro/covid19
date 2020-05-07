@@ -18,7 +18,7 @@
           </v-card>
         </v-col>
       </v-row>
-      <p>Last update {{ lastUpdate }}</p>
+      <p class="text--secondary font-weight-light">Last update {{ lastUpdate }}</p>
     </div>
   </div>
 </template>
