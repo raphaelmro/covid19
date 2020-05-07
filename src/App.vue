@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <!-- TODO Create App header -->
-    <summary-dashboard />
-    <!-- TODO Create App footer -->
-  </div>
+  <v-app>
+    <Header />
+
+    <v-content>
+      <summary-dashboard></summary-dashboard>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 import SummaryDashboard from './components/SummaryDashboard.vue'
+import Header from './Header.vue'
 
 export default {
   name: 'App',
-  components: { SummaryDashboard },
+  components: { Header, SummaryDashboard },
 }
 </script>

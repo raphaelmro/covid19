@@ -2,11 +2,22 @@
   <div>
     <div v-if="isEmpty">Loading. Please wait...</div>
     <div v-else>
-      <ul>
-        <li v-for="info in infos" :key="info">
-          {{ `${capitalizeWords(info)} ${summary[info]}` }}
-        </li>
-      </ul>
+      <h1>Dashboard</h1>
+      <v-row>
+        <v-col cols="3" v-for="info in infos" :key="info">
+          <v-card
+            class="mx-auto"
+            max-width="344"
+          >
+            <v-card-text>
+              <div>{{ `${capitalizeWords(info)} `}}</div>
+              <div class="text--primary">
+                {{ `${summary[info]}` }}
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
       <p>Last update {{ lastUpdate }}</p>
     </div>
   </div>
