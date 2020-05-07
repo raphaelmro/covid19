@@ -10,7 +10,6 @@ export default new Vuex.Store({
   },
   mutations: {
     FETCH_BRAZIL_DATA(state, data) {
-      // state.data.push(data)
       this.state.summary = data
     },
   },
